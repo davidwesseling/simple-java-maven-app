@@ -16,6 +16,11 @@ pipeline {
                 }
             }
         }
+        stage('Pre-Deliver') {
+            steps {
+                sh "echo This is the pre-deliver stage!"
+            }
+        }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
